@@ -1,0 +1,89 @@
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<mat-slide-toggle [(ngModel)]="iscard"   color="accent" class="radiobutton">Поменять стиль </mat-slide-toggle>
+<div *ngIf="iscard">
+  <app-cardclient *ngFor="let d of Clients" [d]="d" class="cards"></app-cardclient>
+</div>
+
+<div *ngIf="!iscard">
+  <app-tableclient  [Clients]="Clients"></app-tableclient>
+</div>
+<div class="button-container" (click)="onProductEdited()">
+  <button mat-fab color="black">
+    <mat-icon>create</mat-icon>
+  </button>
+</div>
+
+<table class="text">
+  <tr>
+    <td class="leftcol"><div *ngIf="iseditable" style="margin-top: -100px;">
+      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Удалить услугу у пользователя</h1></div>
+      <div class="edit-content" *ngIf="iseditable">
+        <mat-card class="button_color">
+          <mat-card-content >
+            <form #f="ngForm" (ngSubmit)="AddUtilityToClient(f.value)">
+              <mat-form-field color="accent">
+                <input matInput type="number"
+                       placeholder="id пользователя"
+                       ngModel name="id" #un="ngModel"
+                       required
+                >
+                <mat-error *ngIf="un?.errors?.required">Необходимо ввести id пользователя</mat-error>
+              </mat-form-field>
+              <mat-form-field color="accent">
+                <input matInput type="number"
+                       placeholder="id услуги"
+                       ngModel name="ids" #un="ngModel"
+                       required
+                >
+                <mat-error *ngIf="un?.errors?.required">Необходимо ввести id услуги</mat-error>
+              </mat-form-field>
+              <button mat-raised-button class="button_color"
+                      type="submit"
+                      [disabled]="f.invalid"
+              >Добавить
+              </button>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div></td>
+    <td class="rightcol"><div *ngIf="iseditable" style="margin-top: -100px;">
+      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Добавить услугу пользователю</h1></div>
+      <div class="edit-content" *ngIf="iseditable">
+        <mat-card class="button_color">
+          <mat-card-content >
+            <form #f="ngForm" (ngSubmit)="DeleteUtilityFromClient(f.value)">
+              <mat-form-field color="accent">
+                <input matInput type="number"
+                       placeholder="id пользователя"
+                       ngModel name="id" #un="ngModel"
+                       required
+                >
+                <mat-error *ngIf="un?.errors?.required">Необходимо ввести id пользователя</mat-error>
+              </mat-form-field>
+              <mat-form-field color="accent">
+                <input matInput type="number"
+                       placeholder="id услуги"
+                       ngModel name="ids" #un="ngModel"
+                       required
+                >
+                <mat-error *ngIf="un?.errors?.required">Необходимо ввести id услуги</mat-error>
+              </mat-form-field>
+              <button mat-raised-button class="button_color"
+                      type="submit"
+                      [disabled]="f.invalid"
+              >Удалить
+              </button>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    </td>
+  </tr>
+</table>
+
+
+

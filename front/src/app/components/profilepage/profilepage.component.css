@@ -1,0 +1,24 @@
+.example-card {
+  max-width: 400px;
+}
+
+.admin {
+  background-image: url('https://sun9-25.userapi.com/impg/mKal0GnpdFHxxj3sh57oCesnTEEHBPha9ATtgQ/BCNvll3VS84.jpg?size=200x160&quality=96&sign=dad593ad2770cb5f748715fc48cbc9b9&type=album');
+  background-size: cover;
+}
+
+
+.user {
+  background-image: url('https://sun9-64.userapi.com/impg/dg4Yist5AeX6-4FvHMvubc4liB52U8jxxiFQ4g/wS2K-k7Fq5A.jpg?size=200x160&quality=96&sign=f5efbfa5f16573c4676d21223a1066e1&type=album');
+  background-size: cover;
+}
+
+.newstyle{
+  background-color: #98AFDF;
+  max-width: 400px;
+  margin:auto
+}
+
+.center-text{
+  text-align: center;
+}

@@ -1,0 +1,14 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" class="colorfull">
+  <mat-icon class="colorfull">more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu" class="colorfull">
+  <button mat-menu-item [routerLink]="['/clients']" class="colorfull">
+    <mat-icon class="colorfull">account_circle</mat-icon>
+    <span class="colorfull">Клиенты</span>
+  </button>
+  <button mat-menu-item [routerLink]="['/utility']" class="colorfull">
+    <mat-icon class="colorfull">add_shopping_cart</mat-icon>
+    <span class="colorfull">Услуги</span>
+  </button>
+</mat-menu>
+

@@ -1,0 +1,33 @@
+<div class="login-content">
+  <mat-card>
+    <mat-card-content>
+      <form #f="ngForm" (ngSubmit)="Login(f.value)">
+        <p >{{msg}}</p>
+        <mat-form-field color="accent">
+          <input matInput type="text"
+                 placeholder="Почта"
+                 ngModel name="login" #un="ngModel"
+                 required
+                 (input)="ResetMsg()"
+          >
+          <mat-error *ngIf="un?.errors?.required">Необходимо ввести почту</mat-error>
+        </mat-form-field>
+        <mat-form-field color="accent">
+          <input matInput type="password"
+                 placeholder="Пароль"
+                 ngModel name="password" #pwd="ngModel"
+                 required
+                 (input)="ResetMsg()"
+          >
+          <mat-error *ngIf="pwd?.errors?.required">Необходимо ввести пароль</mat-error>
+        </mat-form-field>
+        <button mat-raised-button class="button_color"
+                type="submit"
+                [disabled]="f.invalid"
+        >Войти
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+

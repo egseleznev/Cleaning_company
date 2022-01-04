@@ -1,0 +1,93 @@
+<mat-slide-toggle [(ngModel)]="istable"   color="accent" class="radiobutton">Поменять стиль </mat-slide-toggle>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Текущая статистика</h1>
+  <table class="text">
+    <tr>
+      <td class="leftcol "><mat-icon>trending_down</mat-icon>{{stat[0]}} ₽</td>
+      <td class="centercol"><mat-icon>trending_up</mat-icon>{{stat[1]}} ₽</td>
+      <td class="rightcol"><mat-icon>trending_flat</mat-icon>{{stat[2]}} ₽</td>
+    </tr>
+  </table>
+
+<div *ngIf="istable" style="margin-top: 50px;">
+<app-utility *ngFor="let f of Utilities" [f]="f" class="cards"></app-utility>
+</div>
+<div *ngIf="!istable" style="margin-top: 50px;">
+<app-utilitytable  [Utilities]="Utilities"></app-utilitytable>
+</div>
+
+<div class="button-container">
+  <button mat-fab color="black" (click)="onProductEdited()" >
+    <mat-icon>create</mat-icon>
+  </button>
+</div>
+  <table class="text">
+    <tr>
+      <td class="leftcol"><div class="edit-content" *ngIf="iseditable">
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+          <h1 class="display-4">Удалить услугу</h1></div>
+        <mat-card class="button_color">
+          <mat-card-content >
+            <form #f="ngForm" (ngSubmit)="Delete(f.value)">
+              <mat-form-field color="accent">
+                <input matInput type="number"
+                       placeholder="id"
+                       ngModel name="id" #un="ngModel"
+                       required
+                >
+                <mat-error *ngIf="un?.errors?.required">Необходимо ввести ID</mat-error>
+              </mat-form-field>
+              <button mat-raised-button class="button_color"
+                      type="submit"
+                      [disabled]="f.invalid"
+              >Удалить
+              </button>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      </td>
+      <td class="rightcol"><div class="edit-content" *ngIf="iseditable">
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+          <h1 class="display-4">Добавить услугу</h1></div>
+        <mat-card class="button_color">
+          <mat-card-content >
+            <form #f="ngForm" (ngSubmit)="Add(f.value)">
+              <mat-form-field color="accent">
+                <input matInput type="text"
+                       placeholder="Название"
+                       ngModel name="name" #pwd="ngModel"
+                       required
+                >
+                <mat-error *ngIf="pwd?.errors?.required">Необходимо ввести название</mat-error>
+              </mat-form-field>
+              <mat-form-field color="accent">
+                <input matInput type="number"
+                       placeholder="Цена"
+                       ngModel name="price" #pwd="ngModel"
+                       required
+                >
+                <mat-error *ngIf="pwd?.errors?.required">Необходимо ввести цену</mat-error>
+              </mat-form-field>
+              <mat-form-field color="accent">
+                <input matInput type="boolean"
+                       placeholder="Любимый"
+                       ngModel name="isfavourite" #pwd="ngModel"
+                       required
+                >
+                <mat-error *ngIf="pwd?.errors?.required">Необходимо ввести значение isfavourite</mat-error>
+              </mat-form-field>
+              <button mat-raised-button class="button_color"
+                      type="submit"
+                      [disabled]="f.invalid"
+              >Добавить
+              </button>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div></td>
+    </tr>
+  </table>
+
+

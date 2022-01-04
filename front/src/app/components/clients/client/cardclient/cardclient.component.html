@@ -1,0 +1,12 @@
+<mat-card class="example-card" >
+  <mat-card-header>
+    <mat-card-title >{{d?.fullname}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <H4><b>Контактный номер: </b>{{d?.telephonenumber }}</H4>
+    <H4><b>Паспортные данные: </b>{{d?.passportdata }}</H4>
+    <H4><b>Баланс </b>{{d?.balance }}</H4>
+    <H4><b>Список услуг: </b><div *ngFor="let z of d.utilities"><app-utility [f]="z.utility"></app-utility></div></H4>
+  </mat-card-content>
+</mat-card>
+<p class="margin"></p>

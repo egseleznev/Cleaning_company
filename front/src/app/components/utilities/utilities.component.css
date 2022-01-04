@@ -1,0 +1,64 @@
+.radiobutton{
+  color:#98AFDF;
+  margin-left:20px;
+}
+
+.button-container{
+  margin-top: 0px;
+  margin-left:1500px;
+}
+
+.cards{
+  margin-top:10px;
+}
+
+.toggle{
+  margin:auto;
+}
+
+.edit-content {
+  padding: 60px 1em;
+  max-width: 450px;
+  margin:auto;
+
+}
+.button_color{
+  background-color: #98AFDF;
+}
+
+.statistics{
+  font-family: Roboto;
+  font-size: x-large;
+  color:#98AFDF;
+}
+
+table.text  {
+  margin:auto;
+  width:  50%; /* Ширина таблицы */
+  border-spacing: 10px; /* Расстояние между ячейками */
+}
+table.text td {
+  font-family: Roboto;
+  font-size: x-large;
+  width: 5%; /* Ширина ячеек */
+  vertical-align: top; /* Выравнивание по верхнему краю */
+}
+td.rightcol { /* Правая ячейка */
+  font-family: Roboto;
+  font-size: x-large;
+  text-align: right; /* Выравнивание по правому краю */
+  color:#98AFDF;
+}
+td.leftcol { /* Правая ячейка */
+  color:#98AFDF;
+  font-family: Roboto;
+  font-size: x-large;
+  text-align: left; /* Выравнивание по правому краю */
+}
+td.centercol { /* Правая ячейка */
+  font-family: Roboto;
+  font-size: x-large;
+  color:#98AFDF;
+  text-align: center; /* Выравнивание по правому краю */
+}
+

@@ -1,0 +1,21 @@
+<mat-card class="example-card" class="newstyle">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title *ngIf="role" class="center-text">Админ</mat-card-title>
+    <mat-card-title *ngIf="!role" class="center-text">Пользователь</mat-card-title>
+  </mat-card-header>
+  <div *ngIf="role">
+  <img mat-card-image src="https://sun9-20.userapi.com/impg/L5KyvpwqfQeAG7kECB3Ze9t9NlnyIcs-7KZCpw/x9SEp-1IBSI.jpg?size=1000x800&quality=96&sign=fc716f8f8f9c0c0402c333a980b4a1d8&type=album">
+  </div>
+  <div *ngIf="!role">
+    <img mat-card-image src="https://sun9-48.userapi.com/impg/2YaqBPlgUbMpxXugZwgw8kRdDWtM2OoUC96EyA/UhjAvMKa34U.jpg?size=1000x800&quality=96&sign=1b4f20f744225c3882270e2cabc3dfb1&type=album">
+  </div>
+  <mat-card-content>
+    <H1 class="center-text">
+Clean&Clear
+    </H1>
+  </mat-card-content>
+  <mat-card-actions>
+  </mat-card-actions>
+</mat-card>
+
