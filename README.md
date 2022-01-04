@@ -16,7 +16,7 @@
 
 > **Angular** 
 
-> **ASP.NET CORE** 
+> **ASP.NET Core** 
 
 > **SQLServer**
 
