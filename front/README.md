@@ -1,27 +1,44 @@
-# FrontSeleznev
+# ПРИЛОЖЕНИЕ КЛИНИНГОВОЙ КОМПАНИИ
+> # Веб-приложение позволяет клининговой компании вести внутреннюю базу клиентов и заказанных ими услуг.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
 
-## Development server
+# ОСНОВНЫЕ ФУНКЦИИ
+> **Ведение** базы клиентов и услуг.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+> **Добавление** клиентам услуг.
 
-## Code scaffolding
+> **Отслеживание** основных финансовый показателей по услугам.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> **Управление** правами доступа к базам данных с помощью авторизации(хэширование паролей).
 
-## Build
+# СТЭК ТЕХНОЛОГИЙ
+> **Node.js**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+> **Angular** 
 
-## Running unit tests
+> **ASP.NET CORE** 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+> **SQLServer**
 
-## Running end-to-end tests
+> **** 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# ЗАПУСК FRONT END'A
+```console
+npm install
+```
+```console
+npm start
+```
+# СКРИНШОТЫ
+![ЭКРАН 1](https://i.ibb.co/LNbf1QF/2.png)
+![ЭКРАН 2](https://i.ibb.co/BwhsF6T/3.png)
+![ЭКРАН 3](https://i.ibb.co/WtG64XX/6.png)
+![ЭКРАН 4](https://i.ibb.co/k1NvDF6/7.png)
+![ЭКРАН 5](https://i.ibb.co/HKHWd82/4.png)
+![ЭКРАН 6](https://i.ibb.co/ZWVbGkr/5.png)
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+
