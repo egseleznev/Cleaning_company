@@ -22,7 +22,7 @@
 
 > **** 
 
-# ЗАПУСК FRONT END'A
+# ЗАПУСК FRONTEND'A
 ```console
 npm install
 ```
